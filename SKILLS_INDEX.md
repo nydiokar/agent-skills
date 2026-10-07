@@ -1,10 +1,11 @@
 # Skills Index (GENERATED — do not hand-edit)
 
 > Regenerate: `python scripts/index_skills.py --render`.
-> 1 skill(s) registered.
+> 2 skill(s) registered.
 
 | Skill | Status | Kind | Summary | Tags |
 |---|---|---|---|---|
+| [`heavy-run-governor`](skills/heavy-run-governor/) | beta | skill+tool | Preflight + governor for heavy ML training and long-running jobs — an 8-gate funnel (contract → pipeline → learnability → pilot → profile → resource/GPU → training → eval) with fail-closed rules and runnable preflight scripts. | `ml` `training` `gpu` `preflight` `resource-governor` `checkpoint` `reproducibility` `long-running-jobs` |
 | [`notes-system`](skills/notes-system/) | stable | bundle | Portable shift-log — one note per handoff, generated router, semantic keep/archive, guard hook. | `handoff` `shift-log` `context-management` `scaffolder` `hook` |
 
 ## Install any skill

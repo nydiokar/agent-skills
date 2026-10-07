@@ -1,0 +1,13 @@
+name: heavy-run-governor
+summary: Preflight + governor for heavy ML training and long-running jobs — an 8-gate funnel (contract → pipeline → learnability → pilot → profile → resource/GPU → training → eval) with fail-closed rules and runnable preflight scripts.
+kind: skill+tool
+status: beta
+install: Copy this dir to <target>/.claude/skills/heavy-run-governor; scripts run with python3 (stdlib only). Follow SKILL.md; no wiring required.
+tags: [ml, training, gpu, preflight, resource-governor, checkpoint, reproducibility, long-running-jobs]
+requires: python3 (stdlib only — no pip install; torch optional, used only by accelerator_check.py / run_manifest.py when present)
+entrypoints:
+  - SKILL.md                         # the gate funnel G0–G8, fail-closed rules, pointers
+  - reference/                       # one playbook per gate, loaded on demand
+  - scripts/resource_preflight.py    # G5 machine capacity + contention → GO/NO-GO
+  - scripts/accelerator_check.py     # G5 prove the framework uses the intended GPU/ROCm/MPS
+  - scripts/run_manifest.py          # emit the durable run manifest (G6)
