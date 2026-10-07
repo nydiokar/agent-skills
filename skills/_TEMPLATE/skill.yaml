@@ -1,0 +1,9 @@
+name: _TEMPLATE
+summary: REPLACE ME — one line shown in the skills index.
+kind: skill            # skill | skill+tool | skill+hook | bundle
+status: experimental   # experimental | beta | stable
+install: Copy this dir to <target>/.claude/skills/<name>, then follow SKILL.md.
+tags: [replace, me]
+requires: none
+entrypoints:
+  - SKILL.md

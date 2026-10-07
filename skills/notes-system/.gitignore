@@ -1,0 +1,4 @@
+# The router is GENERATED — never commit it from the bundle (targets regenerate their own).
+**/NOTES_INDEX_GENERATED.md
+__pycache__/
+*.pyc

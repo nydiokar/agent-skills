@@ -1,0 +1,13 @@
+name: notes-system
+summary: Portable shift-log — one note per handoff, generated router, semantic keep/archive, guard hook.
+kind: bundle
+status: stable
+install: Copy this dir to <target>/.claude/skills/notes-system, then invoke the skill to scaffold.
+tags: [handoff, shift-log, context-management, scaffolder, hook]
+requires: python3 (stdlib only — no pip install)
+entrypoints:
+  - SKILL.md               # installer skill (scaffold into a target project)
+  - usage-skill/SKILL.md   # the `notes` usage skill (write/audit/archive)
+  - tool/notes_tool.py     # projection engine + scaffolder
+  - hook/guard_notes_generated.py  # PreToolUse guard for the generated router
+  - templates/             # README/AGENTS/NOTE_TEMPLATE dropped into targets on --init

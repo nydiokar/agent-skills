@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.DS_Store
+# A skill's own generated router (notes-system) — never committed from the registry.
+**/NOTES_INDEX_GENERATED.md
