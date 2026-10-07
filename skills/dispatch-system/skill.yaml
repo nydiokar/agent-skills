@@ -1,0 +1,13 @@
+name: dispatch-system
+summary: Portable, date-organized job-state tracker — folder-is-the-registry, yaml state blocks, generated views, gap detection, git-hook.
+kind: bundle
+status: stable
+install: Copy this dir to <target>/.claude/skills/dispatch-system, then invoke the skill to scaffold.
+tags: [dispatch, job-tracking, state-machine, registry, date-organized, scaffolder, hook]
+requires: python3 + pyyaml + pandas + pyarrow
+entrypoints:
+  - SKILL.md                     # installer skill (scaffold into a target project)
+  - usage-skill/SKILL.md         # the `dispatch` usage skill (create/set/audit/next/organize)
+  - tool/dispatch_state.py       # scanner + projection engine + date-organizer
+  - templates/CLAUDE.md          # per-job protocol doc dropped into the target
+  - templates/.dispatch_not_a_job  # sidecar example

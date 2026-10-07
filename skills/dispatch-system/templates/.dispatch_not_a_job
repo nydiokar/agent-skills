@@ -1,0 +1,8 @@
+# Filenames in the dispatch tree that are NOT dispatch jobs (one per line).
+# These are skipped by the scanner so they never show as MISSING_STATE.
+# The tool already hardcodes the universal ones (DISPATCH_LOG.md, _DISPATCH_STATE.md,
+# CLAUDE.md, AGENTS.md, AGENT.md, README.md). Add project-specific ones below.
+#
+# Example:
+# DISPATCH_INDEX.md
+# RECURRING_CADENCE.md
